@@ -1,0 +1,11 @@
+Model Information:
+* title:	Gargantuar Plants vs Zombies 2
+* source:	https://sketchfab.com/3d-models/gargantuar-plants-vs-zombies-2-a8983757f94d4c1798977393cc6ce75d
+* author:	efrenfreeze (https://sketchfab.com/efrenfreeze)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Gargantuar Plants vs Zombies 2" (https://sketchfab.com/3d-models/gargantuar-plants-vs-zombies-2-a8983757f94d4c1798977393cc6ce75d) by efrenfreeze (https://sketchfab.com/efrenfreeze) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
