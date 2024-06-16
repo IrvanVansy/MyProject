@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <!-- Correcting zooming issue -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <!-- Library untuk VR membangun 3D -->
+    <script src="./js/aframe/aframe.min.js"></script>
+    <!-- Library untuk AR yang melakukan pengenalan marker dan menyematkan kamera-->
+    <script src="./js/arjs/aframe-ar.js"></script>
+    <title>Multiple Marker AR</title>
+    <!-- include text geometry -->
+    <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+  </head>
+
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene embedded vr-mode-ui="enabled: false" arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;">
+      <!-- create assets -->
+      <a-assets timeout="900000">
+        <a-asset-item id="bmw_e24" src="./assets/3D_model/bmw_e24/scene.gltf"></a-asset-item>
+        <a-asset-item id="bmw_m3" src="./assets/3D_model/bmw_m3/scene.gltf"></a-asset-item>
+        <a-asset-item id="bmw_m4" src="./assets/3D_model/bmw_m4/scene.gltf"></a-asset-item>
+        <a-asset-item id="bmw_m5" src="./assets/3D_model/bmw_m5/scene.gltf"></a-asset-item>
+        <a-asset-item id="lamborghini_gallardo" src="./assets/3D_model/lamborghini_gallardo/scene.gltf"></a-asset-item>
+        <a-asset-item id="lamborghini_revuelto" src="./assets/3D_model/lamborghini_revuelto/scene.gltf"></a-asset-item>
+        <a-asset-item id="nissan_gtr" src="./assets/3D_model/nissan_gtr/scene.gltf"></a-asset-item>
+        <a-asset-item id="nissan_skyline" src="./assets/3D_model/nissan_skyline/scene.gltf"></a-asset-item>
+        <a-asset-item id="toyota_supra" src="./assets/3D_model/toyota_supra/scene.gltf"></a-asset-item>
+        <a-asset-item id="toyota_supra_mk4" src="./assets/3D_model/toyota_supra_mk4/scene.gltf"></a-asset-item>
+        <a-asset-item id="vansy_logo" src="./assets/Marker/vansy_logo.png"></a-asset-item>
+      </a-assets>
+
+      <!-- handle unknown marker -->
+      <a-marker type="unknown">
+        <a-box depth="1" height="1" width="1" position="0 0.5 0" material="opacity: 0.5; side:double; color:purple;"></a-box>
+      </a-marker>
+
+      <!-- handle hiro marker -->
+      <a-marker preset="hiro">
+        <a-entity gltf-model="#toyota_supra_mk4" rotation="-90 0 0" scale="0.5 0.5 0.5" animation-mixer></a-entity>
+      </a-marker>
+
+      <!-- handle kanji marker -->
+      <a-marker preset="kanji">
+        <a-entity gltf-model="#toyota_supra" rotation="90 180 0" scale="0.5 0.5 0.5"></a-entity>
+      </a-marker>
+
+      <!-- handle matrix marker -->
+      <a-marker type="barcode" value="0">
+        <a-gltf-model src="#bmw_e24" rotation="-90 90 0" scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-marker>
+
+      <a-marker type="barcode" value="1">
+        <a-gltf-model src="#bmw_m3" rotation="90 90 0" scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-marker>
+
+      <a-marker type="barcode" value="2">
+        <a-gltf-model src="#bmw_m4" rotation="180 90 0" scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-marker>
+
+      <a-marker type="barcode" value="3">
+        <a-gltf-model src="#bmw_m5" rotation="0 0 0" scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-marker>
+
+      <a-marker type="barcode" value="4">
+        <a-gltf-model src="#lamborghini_gallardo" rotation="0 0 0" scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-marker>
+
+      <a-marker type="barcode" value="5">
+        <a-gltf-model src="#lamborghini_revuelto" rotation="0 0 0" scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-marker>
+
+      <a-marker type="barcode" value="6">
+        <a-gltf-model src="#nissan_gtr" rotation="90 90 0" scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-marker>
+
+      <a-marker type="barcode" value="7">
+        <a-gltf-model src="#nissan_skyline" rotation="0 0 0" scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-marker>
+
+      <a-marker type="barcode" value="8">
+        <a-gltf-model src="#toyota_supra" rotation="90 180 0" scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-marker>
+
+      <a-marker type="barcode" value="9">
+        <a-gltf-model src="#toyota_supra_mk4" rotation="-90 0 0" scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-marker>
+
+      <!-- handle custom marker -->
+      <a-marker preset="custom" type="pattern" url="./assets/Marker/vansy_logo.patt">
+        <a-image src="#vansy_logo" rotation="-90 0 0" position="0 0 0"></a-image>
+      </a-marker>
+
+      <!-- add a simple camera -->
+      <a-entity camera>
+        <a-cursor></a-cursor>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>

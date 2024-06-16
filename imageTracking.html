@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.0.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+    <a-scene mindar-image="imageTargetSrc: ./targets/targets.mind; maxTrack: 10" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-assets>
+        <a-asset-item id="bmw_m5Model" src="./assets/3D_model/bmw_m5/scene.gltf"></a-asset-item>
+        <a-asset-item id="bmw_m4Model" src="./assets/3D_model/bmw_m4/scene.gltf"></a-asset-item>
+        <a-asset-item id="bmw_m3Model" src="./assets/3D_model/bmw_m3/scene.gltf"></a-asset-item>
+        <a-asset-item id="bmw_e24Model" src="./assets/3D_model/bmw_e24/scene.gltf"></a-asset-item>
+        <a-asset-item id="nissan_gtrModel" src="./assets/3D_model/nissan_gtr/scene.gltf"></a-asset-item>
+        <a-asset-item id="toyota_supraModel" src="./assets/3D_model/toyota_supra/scene.gltf"></a-asset-item>
+        <a-asset-item id="nissan_skylineModel" src="./assets/3D_model/nissan_skyline/scene.gltf"></a-asset-item>
+        <a-asset-item id="toyota_supra_mk4Model" src="./assets/3D_model/toyota_supra_mk4/scene.gltf"></a-asset-item>
+        <a-asset-item id="lamborghini_gallardoModel" src="./assets/3D_model/lamborghini_gallardo/scene.gltf"></a-asset-item>
+        <a-asset-item id="lamborghini_revueltoModel" src="./assets/3D_model/lamborghini_revuelto/scene.gltf"></a-asset-item>
+
+        <a-image id="bmw_m5" src="./assets/cards/0.png"></a-image>
+        <a-image id="bmw_m4" src="./assets/cards/1.png"></a-image>
+        <a-image id="bmw_m3" src="./assets/cards/2.png"></a-image>
+        <a-image id="bmw_e24" src="./assets/cards/3.png"></a-image>
+        <a-image id="nissan_gtr" src="./assets/cards/4.png"></a-image>
+        <a-image id="toyota_supra" src="./assets/cards/5.png"></a-image>
+        <a-image id="nissan_skyline" src="./assets/cards/6.png"></a-image>
+        <a-image id="toyota_supra_mk4" src="./assets/cards/7.png"></a-image>
+        <a-image id="lamborghini_gallardo" src="./assets/cards/8.png"></a-image>
+        <a-image id="lamborghini_revuelto" src="./assets/cards/9.png"></a-image>
+      </a-assets>
+
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-image scale="2 1 1" src="#bmw_m5"></a-image>
+        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="#bmw_m5Model" animation-mixer></a-gltf-model>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 1">
+        <a-image scale="2 1 1" src="#bmw_m4"></a-image>
+        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="#bmw_m4Model" animation-mixer></a-gltf-model>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 2">
+        <a-image scale="2 1 1" src="#bmw_m3"></a-image>
+        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="#bmw_m3Model" animation-mixer></a-gltf-model>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 3">
+        <a-image scale="2 1 1" src="#bmw_e24"></a-image>
+        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="#bmw_e24Model" animation-mixer></a-gltf-model>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 4">
+        <a-image scale="2 1 1" src="#nissan_gtr"></a-image>
+        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="#nissan_gtrModel" animation-mixer></a-gltf-model>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 5">
+        <a-image scale="2 1 1" src="#toyota_supra"></a-image>
+        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="#toyota_supraModel" animation-mixer></a-gltf-model>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 6">
+        <a-image scale="2 1 1" src="#nissan_skyline"></a-image>
+        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="#nissan_skylineModel" animation-mixer></a-gltf-model>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 7">
+        <a-image scale="2 1 1" src="#toyota_supra_mk4"></a-image>
+        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="#toyota_supra_mk4Model" animation-mixer></a-gltf-model>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 8">
+        <a-image scale="2 1 1" src="#lamborghini_gallardo"></a-image>
+        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="#lamborghini_gallardoModel" animation-mixer></a-gltf-model>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 9">
+        <a-image scale="2 1 1" src="#lamborghini_revuelto"></a-image>
+        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="#lamborghini_revueltoModel" animation-mixer></a-gltf-model>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
