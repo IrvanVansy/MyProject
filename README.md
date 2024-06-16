@@ -6,7 +6,7 @@ Proyek ini dibuat sebagai bagian dari tugas mata kuliah Augmented Reality yang d
 
 Pada website ini anda dapat menggunakan teknologi Argumented Reality (AR) baik dari penanda (marker) ataupun kartu yang dapat anda unduh melalui link berikut ini:
 
-[Unduh Penanda](https://drive.google.com/file/d/1Q3Q3Q)
+[Unduh Penanda]([https://drive.google.com/file/d/1Q3Q3Q](https://irvanvansy.github.io/website_AR/Marker.pdf))
 
 ## Panduan
 
@@ -25,7 +25,7 @@ Dan lihatlah bagaimana AR dapat mengubah cara kita berinteraksi dengan dunia nya
 ## Website Link
 
 Website dapat anda akses melalui link dibawah ini ataupun melalui scan qr code yang ada.
-[Website AR](https://ar-website.netlify.app/)
+[Website AR](https://irvanvansy.github.io/website_AR/)
 
 ##
 
